@@ -18,7 +18,7 @@ namespace School.Entities
         public string FirstName { get; set; } = null!;
         public string LastName { get; set; } = null!;
         public DateTime DateOfBirth { get; set; }
-        public char Sex { get; set; } = null!;
+        public char Sex { get; set; } 
 
         public virtual ICollection<CoursesStudent> CoursesStudents { get; set; }
 
