@@ -14,6 +14,7 @@ namespace Employee.DAL.DataAccess
 
         public IList<Entities.Models.Employee> Get()
         {
+            
             return _dbContext.Employees.ToList();
         }
 
