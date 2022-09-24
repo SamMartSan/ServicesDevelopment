@@ -1,4 +1,4 @@
-﻿namespace Employee.Application
+﻿namespace EmployeeApp.Domain
 {
    public class Class1
    {
