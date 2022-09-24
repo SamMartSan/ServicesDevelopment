@@ -10,10 +10,4 @@
     <PackageReference Include="Swashbuckle.AspNetCore" Version="6.2.3" />
   </ItemGroup>
 
-  <ItemGroup>
-    <ProjectReference Include="..\Person.BL\Person.BL.csproj" />
-    <ProjectReference Include="..\Person.DAL\Person.DAL.csproj" />
-    <ProjectReference Include="..\Person.Entities\Person.Entities.csproj" />
-  </ItemGroup>
-
 </Project>

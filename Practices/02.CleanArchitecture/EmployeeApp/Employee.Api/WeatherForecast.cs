@@ -1,4 +1,4 @@
-namespace Person.Api
+namespace Employee.Api
 {
    public class WeatherForecast
    {
