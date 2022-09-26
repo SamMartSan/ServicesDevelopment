@@ -16,7 +16,7 @@ namespace EmployeeApp.Application.Interfaces
 
         public Task<IEnumerable<Employee>> FindAsync(Expression<Func<Employee, bool>> predicate);
 
-        public Task UpdateAsync(int id, Employee entity);
+        public Task<Employee> UpdateAsync(int id, Employee entity);
 
         public Task RemoveAsync(int id);
     }

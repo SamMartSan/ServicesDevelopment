@@ -1,8 +1,10 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using EmployeeApp.Application.Interfaces;
 using EmployeeApp.Domain.Entities;
+using EmployeeApp.Domain.Exceptions;
 using System.Collections.Generic;
 using System.Threading.Tasks;
+using Microsoft.IdentityModel.SecurityTokenService;
 
 
 // For more information on enabling Web API for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
@@ -44,8 +46,18 @@ namespace EmployeeApp.Api.Controllers
         [HttpPut("{id}")]
         public async Task<IActionResult> Put(int id, [FromBody] Employee employee)
         {
-            await _employeeService.UpdateAsync(id, employee);
-            return Ok();
+            try
+            {
+                return Ok(await _employeeService.UpdateAsync(id, employee));
+            }
+            catch (BadRequestException ex)
+            {
+                return BadRequest(ex.Message);
+            }
+            catch (NotFoundException ex)
+            {
+                return NotFound(ex.Message);
+            }
         }
 
         // DELETE api/<PeopleController>/5

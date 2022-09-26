@@ -1,6 +1,7 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using EmployeeApp.Domain.Common;
 using EmployeeApp.Infrastructure.Context;
+using EmployeeApp.Domain.Exceptions;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -38,19 +39,41 @@ namespace EmployeeApp.Infrastructure.Common
 
         public async Task<T> GetByIdAsync(int id)
         {
+            
+            
             return await _appDbContext.Set<T>().FindAsync(id);
         }
 
         public async Task RemoveAsync(T entity)
         {
+            var id = entity?.Id;
+            var original = await _appDbContext.Set<T>().FindAsync(id);
+
+            if (original is null)
+            {
+                throw new NotFoundException($"Employee with Id={id} Not Found");
+            }
+
             _appDbContext.Set<T>().Remove(entity);
             await _appDbContext.SaveChangesAsync();
+
         }
 
-        public async Task UpdateAsync(T entity)
+        public async Task<T> UpdateAsync(T entity)
         {
             _appDbContext.Entry(entity).State = EntityState.Modified;
+            var id = entity?.Id;
+            var original = await _appDbContext.Set<T>().FindAsync(id);
+
+            if (original is null)
+            {
+                throw new NotFoundException($"Employee with Id={id} Not Found");
+            }
+
+            _appDbContext.Entry(original).CurrentValues.SetValues(entity);
             await _appDbContext.SaveChangesAsync();
+
+            return entity;
         }
     }
 }
