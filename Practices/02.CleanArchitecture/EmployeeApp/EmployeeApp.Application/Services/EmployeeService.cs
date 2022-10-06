@@ -3,10 +3,7 @@ using EmployeeApp.Domain.Entities;
 using EmployeeApp.Domain.Exceptions;
 using EmployeeApp.Domain.Interfaces.Repositories;
 using Microsoft.IdentityModel.SecurityTokenService;
-using System;
-using System.Collections.Generic;
 using System.Linq.Expressions;
-using System.Threading.Tasks;
 
 namespace EmployeeApp.Application.Services
 {

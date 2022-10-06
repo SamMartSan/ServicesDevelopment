@@ -1,9 +1,7 @@
-﻿using Microsoft.AspNetCore.Mvc;
-using EmployeeApp.Application.Interfaces;
+﻿using EmployeeApp.Application.Interfaces;
 using EmployeeApp.Domain.Entities;
 using EmployeeApp.Domain.Exceptions;
-using System.Collections.Generic;
-using System.Threading.Tasks;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.IdentityModel.SecurityTokenService;
 
 

@@ -1,5 +1,4 @@
 ﻿using EmployeeApp.Domain.Common;
-using System;
 using System.ComponentModel.DataAnnotations;
 
 namespace EmployeeApp.Domain.Entities
@@ -7,7 +6,7 @@ namespace EmployeeApp.Domain.Entities
     public class Employee : EntityBase
     {
 
-        
+
         [Required]
         public string FirstName { get; set; }
 

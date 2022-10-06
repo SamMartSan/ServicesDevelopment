@@ -1,12 +1,8 @@
-﻿using Microsoft.EntityFrameworkCore;
-using EmployeeApp.Domain.Common;
-using EmployeeApp.Infrastructure.Context;
+﻿using EmployeeApp.Domain.Common;
 using EmployeeApp.Domain.Exceptions;
-using System;
-using System.Collections.Generic;
-using System.Linq;
+using EmployeeApp.Infrastructure.Context;
+using Microsoft.EntityFrameworkCore;
 using System.Linq.Expressions;
-using System.Threading.Tasks;
 
 namespace EmployeeApp.Infrastructure.Common
 {
@@ -39,8 +35,8 @@ namespace EmployeeApp.Infrastructure.Common
 
         public async Task<T> GetByIdAsync(int id)
         {
-            
-            
+
+
             return await _appDbContext.Set<T>().FindAsync(id);
         }
 

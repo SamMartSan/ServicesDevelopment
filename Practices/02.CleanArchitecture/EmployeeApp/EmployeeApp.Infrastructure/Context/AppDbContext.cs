@@ -1,5 +1,5 @@
-﻿using Microsoft.EntityFrameworkCore;
-using EmployeeApp.Domain.Entities;
+﻿using EmployeeApp.Domain.Entities;
+using Microsoft.EntityFrameworkCore;
 
 namespace EmployeeApp.Infrastructure.Context
 {
