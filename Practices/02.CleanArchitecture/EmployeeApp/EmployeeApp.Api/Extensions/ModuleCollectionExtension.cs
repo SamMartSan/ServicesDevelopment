@@ -5,7 +5,6 @@ using EmployeeApp.Infrastructure.Repositories;
 
 namespace EmployeeApp.Api.Extensions
 {
-<<<<<<< HEAD
     public static class ModuleCollectionExtension
     {
         public static IServiceCollection AddCoreModules(this IServiceCollection services)
@@ -25,24 +24,4 @@ namespace EmployeeApp.Api.Extensions
             return services;
         }
     }
-=======
-   public static class ModuleCollectionExtension
-   {
-      public static IServiceCollection AddCoreModules(this IServiceCollection services)
-      {
-         // Services / Use Cases
-         services.AddScoped<IEmployeeService, EmployeeService>();
-
-         return services;
-      }
-
-      public static IServiceCollection AddInfrastructureModules(this IServiceCollection services)
-      {
-         // Repositories
-         services.AddScoped<IEmployeeRepository, EmployeeRepository>();
-
-         return services;
-      }
-   }
->>>>>>> main
 }

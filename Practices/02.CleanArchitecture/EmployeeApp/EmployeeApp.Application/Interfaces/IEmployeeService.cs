@@ -3,7 +3,6 @@ using System.Linq.Expressions;
 
 namespace EmployeeApp.Application.Interfaces
 {
-<<<<<<< HEAD
     public interface IEmployeeService
     {
         public Task<Employee> AddAsync(Employee entity);
@@ -18,20 +17,4 @@ namespace EmployeeApp.Application.Interfaces
 
         public Task RemoveAsync(int id);
     }
-=======
-   public interface IEmployeeService
-   {
-      public Task<Employee> AddAsync(Employee entity);
-
-      public Task<IEnumerable<Employee>> GetAllAsync();
-
-      public Task<Employee> GetByIdAsync(int id);
-
-      public Task<IEnumerable<Employee>> FindAsync(Expression<Func<Employee, bool>> predicate);
-
-      public Task UpdateAsync(int id, Employee entity);
-
-      public Task RemoveAsync(int id);
-   }
->>>>>>> main
 }
