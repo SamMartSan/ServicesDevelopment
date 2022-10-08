@@ -7,6 +7,7 @@
   </PropertyGroup>
 
   <ItemGroup>
+<<<<<<< HEAD
     <PackageReference Include="Microsoft.EntityFrameworkCore" Version="6.0.9" />
     <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="6.0.9">
       <PrivateAssets>all</PrivateAssets>
@@ -21,6 +22,8 @@
   </ItemGroup>
 
   <ItemGroup>
+=======
+>>>>>>> main
     <ProjectReference Include="..\EmployeeApp.Domain\EmployeeApp.Domain.csproj" />
   </ItemGroup>
 

@@ -6,6 +6,7 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
+<<<<<<< HEAD
   <ItemGroup>
     <PackageReference Include="Microsoft.EntityFrameworkCore" Version="6.0.9" />
     <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="6.0.9">
@@ -19,4 +20,6 @@
     </PackageReference>
   </ItemGroup>
 
+=======
+>>>>>>> main
 </Project>

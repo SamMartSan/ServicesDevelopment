@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 ﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+=======
+<Project Sdk="Microsoft.NET.Sdk.Web">
+>>>>>>> main
 
   <PropertyGroup>
     <TargetFramework>net6.0</TargetFramework>
@@ -8,6 +12,7 @@
 
   <ItemGroup>
     <PackageReference Include="Microsoft.EntityFrameworkCore" Version="6.0.9" />
+<<<<<<< HEAD
     <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="6.0.9">
       <PrivateAssets>all</PrivateAssets>
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
@@ -18,12 +23,18 @@
     </PackageReference>
     <PackageReference Include="Microsoft.IdentityModel" Version="7.0.0" />
     <PackageReference Include="MySql.EntityFrameworkCore" Version="6.0.4" />
+=======
+    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="6.0.9" />
+>>>>>>> main
     <PackageReference Include="Swashbuckle.AspNetCore" Version="6.2.3" />
   </ItemGroup>
 
   <ItemGroup>
     <ProjectReference Include="..\EmployeeApp.Application\EmployeeApp.Application.csproj" />
+<<<<<<< HEAD
     <ProjectReference Include="..\EmployeeApp.Domain\EmployeeApp.Domain.csproj" />
+=======
+>>>>>>> main
     <ProjectReference Include="..\EmployeeApp.Infrastructure\EmployeeApp.Infrastructure.csproj" />
   </ItemGroup>
 
