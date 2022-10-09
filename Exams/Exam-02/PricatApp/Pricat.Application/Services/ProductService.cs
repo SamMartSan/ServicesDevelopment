@@ -19,6 +19,7 @@ namespace PricatApp.Application.Services
 
         public async Task<Product> AddAsync(Product entity)
         {
+
             return await _productRepository.AddAsync(entity);
         }
 

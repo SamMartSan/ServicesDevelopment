@@ -15,7 +15,6 @@ namespace PricatApp.Infrastructure.Context
 
         }
 
-        public DbSet<Categorie> Categories { get; set; }
 
         public DbSet<Product> Products { get; set; }
 

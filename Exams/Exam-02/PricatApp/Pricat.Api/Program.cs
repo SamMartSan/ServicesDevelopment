@@ -22,14 +22,12 @@ builder.Services.AddDbContext<AppDbContext>(options =>
 builder.Services.AddControllers();
 builder.Services.AddSwaggerGen(c =>
 {
-    c.SwaggerDoc("v1", new OpenApiInfo { Title = "Product.Api", Version = "v1" });
+    c.SwaggerDoc("v1", new OpenApiInfo { Title = "Parcial 2", Version = "v1" });
 });
 
 // Add Modules
-builder.Services.AddCoreModulesProduct();
-builder.Services.AddInfrastructureModulesProduct();
-builder.Services.AddCoreModulesCategorie();
-builder.Services.AddInfrastructureModulesCategorie();
+builder.Services.unificador();
+
 
 builder.Services.AddCors();
 

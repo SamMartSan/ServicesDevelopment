@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.IdentityModel.SecurityTokenService;
 using PricatApp.Application.Interfaces;
 using PricatApp.Domain.Entities;
@@ -6,7 +7,8 @@ using PricatApp.Domain.Exceptions;
 
 namespace PricatApp.Api.Controllers
 {
-    [Route("api/v2/[controller]")]
+    
+    [Route("api/v1/[controller]")]
     [ApiController]
     public class ProductController : ControllerBase
     {
