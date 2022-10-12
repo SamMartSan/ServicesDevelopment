@@ -26,7 +26,8 @@ builder.Services.AddSwaggerGen(c =>
 });
 
 // Add Modules
-builder.Services.unificador();
+builder.Services.AddCoreModules();
+builder.Services.AddInfrastructureModules();
 
 
 builder.Services.AddCors();

@@ -10,14 +10,7 @@ namespace PricatApp.Api.Extensions
     public static class ModuleCollectionExtension
     {
 
-        public static void unificador(this IServiceCollection services)
-        {
-            // Services / Use Cases
-            AddCoreModules (services);
-            AddInfrastructureModules(services);
-            AddCoreModulesCategories(services);
-            AddInfrastructureModulesCategorie(services);
-        }
+     
 
         public static IServiceCollection AddCoreModules(this IServiceCollection services)
         {
@@ -31,23 +24,6 @@ namespace PricatApp.Api.Extensions
         {
             // Repositories
             services.AddScoped<IProductRepository, ProductRepository>();
-
-
-            return services;
-        }
-        /// categories
-        public static IServiceCollection AddCoreModulesCategories(this IServiceCollection services)
-        {
-            // Services / Use Cases
-            services.AddScoped<ICategorieService, CategorieService>();
-
-            return services;
-        }
-
-        public static IServiceCollection AddInfrastructureModulesCategorie(this IServiceCollection services)
-        {
-            // Repositories
-            services.AddScoped<ICategorieRepository, CategorieRepository>();
 
 
             return services;
