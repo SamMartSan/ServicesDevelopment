@@ -36,17 +36,13 @@ namespace PricatApp.Infrastructure.Common
 
         public async Task<T> GetByIdAsync(int id)
         {
-            var  persona= await _appDbContext.Set<T>().FindAsync(id);
+            var person=await _appDbContext.Set<T>().FindAsync(id);
+            if (person == null)
+            {
+                throw new NotFoundException($"Product with Id:{id } Not found");
+            }
 
-            try
-            {
-                return persona;
-            }
-            catch(Exception e)
-            {
-                throw new NotFoundException("no se encontro");
-            }
-            
+            return person;
         }
 
         public async Task RemoveAsync(T entity)
