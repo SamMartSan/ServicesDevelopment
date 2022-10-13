@@ -4,25 +4,28 @@ using System.Runtime.Serialization;
 
 namespace Application.Exceptions
 {
+    /// <summary>
+    /// Base Business Exception
+    /// </summary>
     [ExcludeFromCodeCoverage]
     [Serializable]
-    public class BadRequestException : BusinessException
+    public class BusinessException : Exception
     {
-        public BadRequestException()
+        public BusinessException()
         {
         }
 
-        public BadRequestException(string message) : base(message)
+        public BusinessException(string message) : base(message)
         {
         }
 
-        public BadRequestException(string message, Exception innerException)
+        public BusinessException(string message, Exception innerException)
             : base(message, innerException)
         {
         }
 
         // Without this constructor, deserialization will fail
-        protected BadRequestException(SerializationInfo info, StreamingContext context)
+        protected BusinessException(SerializationInfo info, StreamingContext context)
             : base(info, context)
         {
         }

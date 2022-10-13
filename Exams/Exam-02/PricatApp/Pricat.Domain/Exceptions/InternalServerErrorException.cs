@@ -6,23 +6,23 @@ namespace Application.Exceptions
 {
     [ExcludeFromCodeCoverage]
     [Serializable]
-    public class BadRequestException : BusinessException
+    public class InternalServerErrorException : BusinessException
     {
-        public BadRequestException()
+        public InternalServerErrorException()
         {
         }
 
-        public BadRequestException(string message) : base(message)
+        public InternalServerErrorException(string message) : base(message)
         {
         }
 
-        public BadRequestException(string message, Exception innerException)
+        public InternalServerErrorException(string message, Exception innerException)
             : base(message, innerException)
         {
         }
 
         // Without this constructor, deserialization will fail
-        protected BadRequestException(SerializationInfo info, StreamingContext context)
+        protected InternalServerErrorException(SerializationInfo info, StreamingContext context)
             : base(info, context)
         {
         }
