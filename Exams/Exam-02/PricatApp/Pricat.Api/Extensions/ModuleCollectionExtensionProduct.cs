@@ -7,12 +7,12 @@ using PricatApp.Infrastructure.Repositories;
 
 namespace PricatApp.Api.Extensions
 {
-    public static class ModuleCollectionExtension
+    public static class ModuleCollectionExtensionProduct
     {
 
      
 
-        public static IServiceCollection AddCoreModules(this IServiceCollection services)
+        public static IServiceCollection AddCoreModulesProduct(this IServiceCollection services)
         {
             // Services / Use Cases
             services.AddScoped<IProductService, ProductService>();
@@ -20,7 +20,7 @@ namespace PricatApp.Api.Extensions
             return services;
         }
 
-        public static IServiceCollection AddInfrastructureModules(this IServiceCollection services)
+        public static IServiceCollection AddInfrastructureModulesProduct(this IServiceCollection services)
         {
             // Repositories
             services.AddScoped<IProductRepository, ProductRepository>();

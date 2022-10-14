@@ -78,7 +78,9 @@ namespace Pricat.Api.Middleware
         /// <returns>The HttpStatus Code</returns>
         private static HttpStatusCode GetStatusResponse(Exception exception)
         {
+#pragma warning disable CS8602 // Dereference of a possibly null reference.
             var nameOfException = exception.GetType().BaseType.Name;
+#pragma warning restore CS8602 // Dereference of a possibly null reference.
 
             if (nameOfException.Equals("BusinessException"))
             {

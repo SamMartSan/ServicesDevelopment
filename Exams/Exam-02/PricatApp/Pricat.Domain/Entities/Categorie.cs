@@ -5,6 +5,6 @@ namespace PricatApp.Domain.Entities
     public class Categorie : EntityBase
     {
         [Required]
-        public string Description { get; set; }
+        public string? Description { get; set; }
     }
 }

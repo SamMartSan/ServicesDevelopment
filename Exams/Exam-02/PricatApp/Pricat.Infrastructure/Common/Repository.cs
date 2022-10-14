@@ -55,23 +55,26 @@ namespace PricatApp.Infrastructure.Common
                 throw new NotFoundException($"element with Id={id} Not Found");
             }
 
+#pragma warning disable CS8604 // Possible null reference argument.
             _appDbContext.Set<T>().Remove(entity);
+#pragma warning restore CS8604 // Possible null reference argument.
             await _appDbContext.SaveChangesAsync();
 
         }
 
         public async Task<T> UpdateAsync(T entity)
         {
-            _appDbContext.Entry(entity).State = EntityState.Modified;
             var id = entity?.Id;
             var original = await _appDbContext.Set<T>().FindAsync(id);
 
             if (original is null)
             {
-                throw new NotFoundException($"element with Id={id} Not Found");
+                throw new NotFoundException($"Employee with Id={id} Not Found");
             }
 
+#pragma warning disable CS8604 // Possible null reference argument.
             _appDbContext.Entry(original).CurrentValues.SetValues(entity);
+#pragma warning restore CS8604 // Possible null reference argument.
             await _appDbContext.SaveChangesAsync();
 
             return entity;

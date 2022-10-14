@@ -24,13 +24,18 @@ builder.Services.AddDbContext<AppDbContext>(options =>
 builder.Services.AddControllers();
 builder.Services.AddSwaggerGen(c =>
 {
-    c.SwaggerDoc("v1", new OpenApiInfo { Title = "Parcial 2", Version = "v1" });
-});
+    c.ResolveConflictingActions(apiDescriptions => apiDescriptions.First());
+    c.IgnoreObsoleteActions();
+    c.IgnoreObsoleteProperties();
+    c.CustomSchemaIds(type => type.FullName);
+    });
 
 // Add Modules
-builder.Services.AddCoreModules();
-builder.Services.AddInfrastructureModules();
+builder.Services.AddCoreModulesProduct();
+builder.Services.AddInfrastructureModulesProduct();
 
+builder.Services.AddCoreModulesCategorie();
+builder.Services.AddInfrastructureModulesCategorie();
 
 builder.Services.AddCors();
 // Response of BadRequest
