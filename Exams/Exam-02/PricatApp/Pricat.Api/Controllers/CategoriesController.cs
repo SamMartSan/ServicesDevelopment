@@ -7,13 +7,13 @@ using System.Net;
 
 namespace Pricat.Api.Controllers
 {
-    [Route("api/v1/[controller]")]
+    [Route("api/v1.0/[controller]")]
     [ApiController]
-    public class CategorieController : ControllerBase
+    public class CategoriesController : ControllerBase
     {
 
         private readonly ICategorieService _categorieService;
-        public CategorieController(ICategorieService categorieService)
+        public CategoriesController(ICategorieService categorieService)
         {
             _categorieService = categorieService;
         }
